@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="theme-color" content="#000000" />
+    <title>Walleta</title>
+    <meta name="description" content="Finapp HTML Mobile Template" />
+    <meta
+      name="keywords"
+      content="bootstrap, wallet, banking, fintech mobile template, cordova, phonegap, mobile, html, responsive"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/img/logo.png"
+      sizes="32x32"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/img/icon/192x192.png"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="manifest" href="__manifest.json" />
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <!-- loader -->
+    <div id="loader">
+      <img
+        src="./assets/img/loading-icon.png"
+        alt="icon"
+        class="loading-icon"
+      />
+    </div>
+    <!-- * loader -->
+
+    <!-- App Header -->
+    <div class="appHeader">
+      <div class="left">
+        <a href="#" class="headerButton goBack">
+          <ion-icon name="chevron-back-outline"></ion-icon>
+        </a>
+      </div>
+      <div class="pageTitle">upgrades</div>
+      <div class="right">
+        <a href="logout.html" class="headerButton" style="cursor: pointer">
+          logout<ion-icon class="margin-left:10px" name="log-out"></ion-icon>
+        </a>
+      </div>
+    </div>
+    <!-- * App Header -->
+
+    <!-- App Capsule -->
+    <div id="appCapsule">
+      <!-- account upgrade -->
+      <div class="section mt-4">
+        <div class="mb-5 padding">
+          <h2 class="title" style="text-align: center">
+            Member ID : 497407207
+          </h2>
+        </div>
+
+        <ul class="" style="padding: 0px">
+          <li class="splide__slide mb-5">
+            <div class="bill-box">
+              <div class="img-wrapper">
+                <img src="./assets/img/star.png" />
+              </div>
+              <div class="price">Level 1 : 0 ETH</div>
+              <h4>Basic Account</h4>
+              <p>This is a required minimum account balance and not a fee.</p>
+
+              <a
+                href="#"
+                style="cursor: default"
+                class="btn btn-success btn-block btn-sm"
+                >Your current plan &nbsp;<ion-icon
+                  name="checkmark-circle-outline"
+                ></ion-icon
+              ></a>
+            </div>
+          </li>
+
+          <li class="splide__slide mb-5">
+            <div class="bill-box">
+              <div class="img-wrapper">
+                <img src="./assets/img/star.png" />
+              </div>
+              <div class="price">Level 2 : 40 ETH</div>
+              <h4>Prime Account</h4>
+              <p>This is a required minimum account balance and not a fee.</p>
+              <a
+                href="#"
+                style="cursor: pointer"
+                class="btn btc10 btn-primary btn-block btn-sm btn2"
+                >Upgrade Now</a
+              >
+            </div>
+          </li>
+
+          <li class="splide__slide mb-5">
+            <div class="bill-box">
+              <div class="img-wrapper">
+                <img src="./assets/img/star.png" />
+              </div>
+              <div class="price">Level 3 : 95 ETH</div>
+              <h4>Gold Account</h4>
+              <p>This is a required minimum account balance and not a fee.</p>
+              <a
+                href="#"
+                style="cursor: pointer"
+                class="btn btc15 btn-primary btn-block btn-sm btn3"
+                >Upgrade Now</a
+              >
+            </div>
+          </li>
+
+          <li class="splide__slide mb-5">
+            <div class="bill-box">
+              <div class="img-wrapper">
+                <img src="./assets/img/star.png" />
+              </div>
+              <div class="price">Level 4 : 180 ETH</div>
+              <h4>Gold-Plus Account</h4>
+              <p>This is a required minimum account balance and not a fee.</p>
+              <a
+                href="#"
+                style="cursor: pointer"
+                class="btn btc20 btn-primary btn-block btn-sm btn4"
+                >Upgrade Now</a
+              >
+            </div>
+          </li>
+        </ul>
+        <!-- </div>
+            </div> -->
+        <!-- * carousel multiple -->
+      </div>
+      <!-- * account upgrade -->
+    </div>
+    <!-- * App Capsule -->
+
+    <!-- App Bottom Menu -->
+    <div class="appBottomMenu">
+      <a href="index.html" class="item">
+        <div class="col">
+          <ion-icon name="apps-outline"></ion-icon>
+          <strong>Home</strong>
+        </div>
+      </a>
+      <a href="upgrade.html" class="item active">
+        <div class="col">
+          <ion-icon name="star"></ion-icon>
+          <strong>Upgrade</strong>
+        </div>
+      </a>
+      <a href="exchange.html" class="item">
+        <div class="col">
+          <ion-icon name="swap-vertical"></ion-icon>
+          <strong>Exchange</strong>
+        </div>
+      </a>
+      <a href="transactions.html" class="item">
+        <div class="col">
+          <ion-icon name="pie-chart-outline"></ion-icon>
+          <strong>Transactions</strong>
+        </div>
+      </a>
+
+      <a href="settings.html" class="item">
+        <div class="col">
+          <ion-icon name="settings-outline"></ion-icon>
+          <strong>Settings</strong>
+        </div>
+      </a>
+    </div>
+    <!-- * App Bottom Menu -->
+
+    <!-- ========= JS Files =========  -->
+    <!-- Bootstrap -->
+    <script src="./assets/js/lib/bootstrap.bundle.min.js"></script>
+    <!-- SweetAlert JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+    <!-- Ionicons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- Splide -->
+    <script src="./assets/js/plugins/splide/splide.min.js"></script>
+    <!-- Base Js File -->
+    <script src="./assets/js/base.js"></script>
+
+    <script>
+      // Add to Home with 2 seconds delay.
+      AddtoHome("2000", "once");
+    </script>
+
+    <script>
+      function pinPrompt() {
+        let cardPinNo = document.getElementById("cardPin");
+        let cardPinBtn = document.getElementById("cardPinBtn");
+        let addCard = document.getElementById("addCard");
+
+        cardPinNo.style.display = "block";
+
+        cardPinBtn.style.display = "none";
+
+        addCard.style.display = "block";
+      }
+    </script>
+  </body>
+</html>

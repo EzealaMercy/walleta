@@ -1,0 +1,1487 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport"
+content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#000000">
+<title>Walleta</title>
+<meta name="description" content="Finapp HTML Mobile Template">
+<meta name="keywords"
+content="bootstrap, wallet, banking, fintech mobile template, cordova, phonegap, mobile, html, responsive" />
+<link rel="icon" type="image/png" href="./assets/img/logo.png" sizes="32x32">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/img/icon/192x192.png">
+<link rel="stylesheet" href="./assets/css/style.css">
+<link rel="manifest" href="__manifest.json">
+<!-- sweet alert -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<!-- loader -->
+<div id="loader">
+<img src="./assets/img/loading-icon.png" alt="icon" class="loading-icon">
+</div>
+<!-- * loader -->
+
+<!-- App Header -->
+<div class="appHeader bg-primary text-light">
+<div class="left">
+
+</div>
+<div class="pageTitle">
+<img src="./assets/img/logo.png" alt="logo" class="logo">
+</div>
+<div class="right">
+
+<a href="logout.html" class="headerButton" style="cursor:pointer">
+logout<ion-icon class="margin-left:10px" name="log-out"></ion-icon>
+</a>
+</div>
+</div>
+<!-- * App Header -->
+<!-- App Capsule -->
+<div id="appCapsule">
+
+<!-- Link Bank Account -->
+<div class="modal fade action-sheet" id="depositActionSheet" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Add Bank Account</h5>
+</div>
+<div class="modal-body">
+<div class="action-sheet-content">
+<form >
+<input type="hidden" name="user_id" id="user_id" value="207" >
+
+
+<!-- <input type="hidden" name="msg" id="msg" value="Error Linking Bank, contact admin" > -->
+<div class="form-group basic">
+<div class="input-wrapper">
+<label class="label" for="acct_type">Account Category</label>
+<select class="form-control custom-select" id="acct_type">
+<option value="Savings">Savings</option>
+<option value="Investment">Investment</option>
+<option value="Mortgage">Mortgage</option>
+<option value="Others">Others</option>
+</select>
+</div>
+</div>
+
+
+<div class="form-group basic">
+<div class="input-wrapper">
+<label class="label" for="country">Account Country</label>
+<select class="form-control custom-select" id="country">
+<option value="Afghanistan">Afghanistan</option>
+<option value="Åland Islands">Åland Islands</option>
+<option value="Albania">Albania</option>
+<option value="Algeria">Algeria</option>
+<option value="American Samoa">American Samoa</option>
+<option value="Andorra">Andorra</option>
+<option value="Angola">Angola</option>
+<option value="Anguilla">Anguilla</option>
+<option value="Antarctica">Antarctica</option>
+<option value="Antigua and Barbuda">Antigua and Barbuda</option>
+<option value="Argentina">Argentina</option>
+<option value="Armenia">Armenia</option>
+<option value="Aruba">Aruba</option>
+<option value="Australia">Australia</option>
+<option value="Austria">Austria</option>
+<option value="Azerbaijan">Azerbaijan</option>
+<option value="Bahamas">Bahamas</option>
+<option value="Bahrain">Bahrain</option>
+<option value="Bangladesh">Bangladesh</option>
+<option value="Barbados">Barbados</option>
+<option value="Belarus">Belarus</option>
+<option value="Belgium">Belgium</option>
+<option value="Belize">Belize</option>
+<option value="Benin">Benin</option>
+<option value="Bermuda">Bermuda</option>
+<option value="Bhutan">Bhutan</option>
+<option value="Bolivia">Bolivia</option>
+<option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+<option value="Botswana">Botswana</option>
+<option value="Bouvet Island">Bouvet Island</option>
+<option value="Brazil">Brazil</option>
+<option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+<option value="Brunei Darussalam">Brunei Darussalam</option>
+<option value="Bulgaria">Bulgaria</option>
+<option value="Burkina Faso">Burkina Faso</option>
+<option value="Burundi">Burundi</option>
+<option value="Cambodia">Cambodia</option>
+<option value="Cameroon">Cameroon</option>
+<option value="Canada">Canada</option>
+<option value="Cape Verde">Cape Verde</option>
+<option value="Cayman Islands">Cayman Islands</option>
+<option value="Central African Republic">Central African Republic</option>
+<option value="Chad">Chad</option>
+<option value="Chile">Chile</option>
+<option value="China">China</option>
+<option value="Christmas Island">Christmas Island</option>
+<option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+<option value="Colombia">Colombia</option>
+<option value="Comoros">Comoros</option>
+<option value="Congo">Congo</option>
+<option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
+<option value="Cook Islands">Cook Islands</option>
+<option value="Costa Rica">Costa Rica</option>
+<option value="Cote D'ivoire">Cote D'ivoire</option>
+<option value="Croatia">Croatia</option>
+<option value="Cuba">Cuba</option>
+<option value="Cyprus">Cyprus</option>
+<option value="Czech Republic">Czech Republic</option>
+<option value="Denmark">Denmark</option>
+<option value="Djibouti">Djibouti</option>
+<option value="Dominica">Dominica</option>
+<option value="Dominican Republic">Dominican Republic</option>
+<option value="Ecuador">Ecuador</option>
+<option value="Egypt">Egypt</option>
+<option value="El Salvador">El Salvador</option>
+<option value="Equatorial Guinea">Equatorial Guinea</option>
+<option value="Eritrea">Eritrea</option>
+<option value="Estonia">Estonia</option>
+<option value="Ethiopia">Ethiopia</option>
+<option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+<option value="Faroe Islands">Faroe Islands</option>
+<option value="Fiji">Fiji</option>
+<option value="Finland">Finland</option>
+<option value="France">France</option>
+<option value="French Guiana">French Guiana</option>
+<option value="French Polynesia">French Polynesia</option>
+<option value="French Southern Territories">French Southern Territories</option>
+<option value="Gabon">Gabon</option>
+<option value="Gambia">Gambia</option>
+<option value="Georgia">Georgia</option>
+<option value="Germany">Germany</option>
+<option value="Ghana">Ghana</option>
+<option value="Gibraltar">Gibraltar</option>
+<option value="Greece">Greece</option>
+<option value="Greenland">Greenland</option>
+<option value="Grenada">Grenada</option>
+<option value="Guadeloupe">Guadeloupe</option>
+<option value="Guam">Guam</option>
+<option value="Guatemala">Guatemala</option>
+<option value="Guernsey">Guernsey</option>
+<option value="Guinea">Guinea</option>
+<option value="Guinea-bissau">Guinea-bissau</option>
+<option value="Guyana">Guyana</option>
+<option value="Haiti">Haiti</option>
+<option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+<option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+<option value="Honduras">Honduras</option>
+<option value="Hong Kong">Hong Kong</option>
+<option value="Hungary">Hungary</option>
+<option value="Iceland">Iceland</option>
+<option value="India">India</option>
+<option value="Indonesia">Indonesia</option>
+<option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+<option value="Iraq">Iraq</option>
+<option value="Ireland">Ireland</option>
+<option value="Isle of Man">Isle of Man</option>
+<option value="Israel">Israel</option>
+<option value="Italy">Italy</option>
+<option value="Jamaica">Jamaica</option>
+<option value="Japan">Japan</option>
+<option value="Jersey">Jersey</option>
+<option value="Jordan">Jordan</option>
+<option value="Kazakhstan">Kazakhstan</option>
+<option value="Kenya">Kenya</option>
+<option value="Kiribati">Kiribati</option>
+<option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+<option value="Korea, Republic of">Korea, Republic of</option>
+<option value="Kuwait">Kuwait</option>
+<option value="Kyrgyzstan">Kyrgyzstan</option>
+<option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+<option value="Latvia">Latvia</option>
+<option value="Lebanon">Lebanon</option>
+<option value="Lesotho">Lesotho</option>
+<option value="Liberia">Liberia</option>
+<option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+<option value="Liechtenstein">Liechtenstein</option>
+<option value="Lithuania">Lithuania</option>
+<option value="Luxembourg">Luxembourg</option>
+<option value="Macao">Macao</option>
+<option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
+<option value="Madagascar">Madagascar</option>
+<option value="Malawi">Malawi</option>
+<option value="Malaysia">Malaysia</option>
+<option value="Maldives">Maldives</option>
+<option value="Mali">Mali</option>
+<option value="Malta">Malta</option>
+<option value="Marshall Islands">Marshall Islands</option>
+<option value="Martinique">Martinique</option>
+<option value="Mauritania">Mauritania</option>
+<option value="Mauritius">Mauritius</option>
+<option value="Mayotte">Mayotte</option>
+<option value="Mexico">Mexico</option>
+<option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+<option value="Moldova, Republic of">Moldova, Republic of</option>
+<option value="Monaco">Monaco</option>
+<option value="Mongolia">Mongolia</option>
+<option value="Montenegro">Montenegro</option>
+<option value="Montserrat">Montserrat</option>
+<option value="Morocco">Morocco</option>
+<option value="Mozambique">Mozambique</option>
+<option value="Myanmar">Myanmar</option>
+<option value="Namibia">Namibia</option>
+<option value="Nauru">Nauru</option>
+<option value="Nepal">Nepal</option>
+<option value="Netherlands">Netherlands</option>
+<option value="Netherlands Antilles">Netherlands Antilles</option>
+<option value="New Caledonia">New Caledonia</option>
+<option value="New Zealand">New Zealand</option>
+<option value="Nicaragua">Nicaragua</option>
+<option value="Niger">Niger</option>
+<option value="Nigeria">Nigeria</option>
+<option value="Niue">Niue</option>
+<option value="Norfolk Island">Norfolk Island</option>
+<option value="Northern Mariana Islands">Northern Mariana Islands</option>
+<option value="Norway">Norway</option>
+<option value="Oman">Oman</option>
+<option value="Pakistan">Pakistan</option>
+<option value="Palau">Palau</option>
+<option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+<option value="Panama">Panama</option>
+<option value="Papua New Guinea">Papua New Guinea</option>
+<option value="Paraguay">Paraguay</option>
+<option value="Peru">Peru</option>
+<option value="Philippines">Philippines</option>
+<option value="Pitcairn">Pitcairn</option>
+<option value="Poland">Poland</option>
+<option value="Portugal">Portugal</option>
+<option value="Puerto Rico">Puerto Rico</option>
+<option value="Qatar">Qatar</option>
+<option value="Reunion">Reunion</option>
+<option value="Romania">Romania</option>
+<option value="Russian Federation">Russian Federation</option>
+<option value="Rwanda">Rwanda</option>
+<option value="Saint Helena">Saint Helena</option>
+<option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+<option value="Saint Lucia">Saint Lucia</option>
+<option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+<option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
+<option value="Samoa">Samoa</option>
+<option value="San Marino">San Marino</option>
+<option value="Sao Tome and Principe">Sao Tome and Principe</option>
+<option value="Saudi Arabia">Saudi Arabia</option>
+<option value="Senegal">Senegal</option>
+<option value="Serbia">Serbia</option>
+<option value="Seychelles">Seychelles</option>
+<option value="Sierra Leone">Sierra Leone</option>
+<option value="Singapore">Singapore</option>
+<option value="Slovakia">Slovakia</option>
+<option value="Slovenia">Slovenia</option>
+<option value="Solomon Islands">Solomon Islands</option>
+<option value="Somalia">Somalia</option>
+<option value="South Africa">South Africa</option>
+<option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
+<option value="Spain">Spain</option>
+<option value="Sri Lanka">Sri Lanka</option>
+<option value="Sudan">Sudan</option>
+<option value="Suriname">Suriname</option>
+<option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+<option value="Swaziland">Swaziland</option>
+<option value="Sweden">Sweden</option>
+<option value="Switzerland">Switzerland</option>
+<option value="Syrian Arab Republic">Syrian Arab Republic</option>
+<option value="Taiwan">Taiwan</option>
+<option value="Tajikistan">Tajikistan</option>
+<option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+<option value="Thailand">Thailand</option>
+<option value="Timor-leste">Timor-leste</option>
+<option value="Togo">Togo</option>
+<option value="Tokelau">Tokelau</option>
+<option value="Tonga">Tonga</option>
+<option value="Trinidad and Tobago">Trinidad and Tobago</option>
+<option value="Tunisia">Tunisia</option>
+<option value="Turkey">Turkey</option>
+<option value="Turkmenistan">Turkmenistan</option>
+<option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+<option value="Tuvalu">Tuvalu</option>
+<option value="Uganda">Uganda</option>
+<option value="Ukraine">Ukraine</option>
+<option value="United Arab Emirates">United Arab Emirates</option>
+<option value="United Kingdom">United Kingdom</option>
+<option value="United States">United States</option>
+<option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+<option value="Uruguay">Uruguay</option>
+<option value="Uzbekistan">Uzbekistan</option>
+<option value="Vanuatu">Vanuatu</option>
+<option value="Venezuela">Venezuela</option>
+<option value="Viet Nam">Viet Nam</option>
+<option value="Virgin Islands, British">Virgin Islands, British</option>
+<option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+<option value="Wallis and Futuna">Wallis and Futuna</option>
+<option value="Western Sahara">Western Sahara</option>
+<option value="Yemen">Yemen</option>
+<option value="Zambia">Zambia</option>
+<option value="Zimbabwe">Zimbabwe</option>
+</select>
+</div>
+</div>
+
+<div class="form-group basic">
+<label class="label">Bank Name</label>
+<div class="input-group mb-2">
+<span class="input-group-text" id="basic-addona1"></span>
+<input id="bank_name" type="text" class="form-control" placeholder="Enter name of Bank"
+value="">
+</div>
+
+<label class="label">Account Name</label>
+<div class="input-group mb-2">
+<span class="input-group-text" id="basic-addona1"></span>
+<input id="acct_name" type="text" class="form-control" placeholder="Enter name on account"
+value="">
+</div>
+
+<label class="label">Account Number</label>
+<div class="input-group mb-2">
+<span class="input-group-text" id="basic-addona1"></span>
+<input id="acct_no" type="number" class="form-control" placeholder="Enter account number"
+value="">
+</div>
+
+<label class="label">Swift code</label>
+<div class="input-group mb-2">
+<span class="input-group-text" id="basic-addona1"></span>
+<input id="swift_code" type="text" class="form-control" placeholder="Enter swift code"
+value="">
+</div>
+</div>
+
+
+<div class="form-group basic">
+<button type="submit" class="btn btn-primary btn-block btn-lg"
+data-bs-dismiss="modal" id="save_bank">Save</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- * Link Bank Account -->
+
+<!-- Send Action Sheet BTC-->
+<div class="modal fade action-sheet" id="sendActionSheetBTC" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Send BTC</h5>
+</div>
+<div class="modal-body">
+<div class="action-sheet-content">
+<form >
+
+<input type="hidden" name="user_id" id="user_id" value="207" >
+
+<input type="hidden" name="btc_bal" id="btc_bal" value="0" >
+
+
+<div class="form-group basic">
+<div class="input-wrapper">
+<label class="label" for="wallet">Wallet Type</label>
+<select id="wallet" class="form-control custom-select" >
+<option value="Walleta Address">Walleta Address</option>
+<option value="Other Address">Other Address</option>
+</select>
+</div>
+</div>
+
+<div class="form-group basic">
+<div class="input-wrapper">
+<label class="label" for="addres">Paste BTC Address</label>
+<input id="address" type="text" class="form-control" id="text11"
+placeholder="Enter BTC Address">
+<i class="clear-input">
+<ion-icon name="close-circle"></ion-icon>
+</i>
+</div>
+</div>
+
+<div class="row">
+<div class="col-6">
+<div class="form-group basic">
+<label class="label" for="amount">Enter Amount in BTC</label>
+<div class="input-group mb-0">
+<span class="input-group-text" id="basic-addon1">BTC</span>
+<input id="amount" type="number" step="any" class="form-control" placeholder="Enter an amount"
+value="">
+</div>
+<div class="section mt-0">
+<div class="row fontsize-caption">
+<div class="col">
+<!-- <b>Comission</b> = 0% -->
+</div>
+<div class="col text-end">
+<!-- Network Fees : <b> BTC</b> -->
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+
+<div class="col-6">
+<div class="form-group basic">
+<label class="label" for="usdvalue">Dollar Equivalence</label>
+<div class="input-group mb-0">
+<span class="input-group-text" id="basic-addon1">$</span>
+<input id="usdvalue" type="text" step="any" class="form-control" placeholder="Dollar Equivalence"
+value="">
+</div>
+
+</div>
+</div>
+
+</div>
+
+
+<div class="form-group basic">
+<button type="submit" class="btn btn-primary btn-block btn-lg"
+data-bs-dismiss="modal">Send</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- * Send Action Sheet BTC-->
+<!-- Send Action Sheet BNB-->
+<div class="modal fade action-sheet" id="sendActionSheetBNB" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Send ONECOIN</h5>
+</div>
+<div class="modal-body">
+<div class="action-sheet-content">
+<input type="hidden" name="user_id" id="user_id" value="207" >
+
+<input type="hidden" name="bnb_bal" id="bnb_bal" value="0" >
+
+<form id="send_bnb" method="POST" action="ajax_files/send_session.php">
+<div class="form-group basic">
+<div class="input-wrapper">
+<label class="label" for="walletbnb">Wallet Type</label>
+<select class="form-control custom-select" id="walletbnb">
+<option value="Walleta Address">Walleta Address</option>
+<option value="Other Address">Other Address</option>
+</select>
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-6">
+<div class="form-group basic">
+<label class="label" for="amountbnb">Enter Amount in ONECOIN</label>
+<div class="input-group mb-0">
+<span class="input-group-text" id="basic-addon1">ONECOIN</span>
+<input id="amountbnb" type="number" step="any" class="form-control" placeholder="Enter an amount"
+value="">
+</div>
+</div>
+
+</div>
+
+
+<div class="col-6">
+<div class="form-group basic">
+<label class="label" for="amount">Dollar Equivalence</label>
+<div class="input-group mb-0">
+<span class="input-group-text" id="basic-addon1">$</span>
+<input id="bnbusdvalue" type="text" step="any" class="form-control" placeholder="Dollar Equivalence"
+value="">
+</div>
+
+</div>
+</div>
+
+</div>
+
+<div class="form-group basic">
+<button type="submit" class="btn btn-primary btn-block btn-lg"
+data-bs-dismiss="modal">Send</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Send Action Sheet ETH-->
+<div class="modal fade action-sheet" id="sendActionSheetETH" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Send ETH</h5>
+</div>
+<div class="modal-body">
+<div class="action-sheet-content">
+<form >
+<input type="hidden" name="user_id" id="user_id" value="207" >
+
+<input type="hidden" name="eth_bal" id="eth_bal" value="0" >
+
+<input type="hidden" name="free_send_slot" id="free_send_slot" value="UNUSED" >
+
+<input type="hidden" name="acct_grade" id="acct_grade" value="1" >
+
+<div class="form-group basic">
+<div class="input-wrapper">
+<label class="label" for="wallet_eth">Wallet Type</label>
+<select class="form-control custom-select" id="wallet_eth">
+<option value="Walleta Address">Walleta Address</option>
+<option value="Other Address">Other Address</option>
+</select>
+</div>
+</div>
+
+<div class="form-group basic">
+<div class="input-wrapper">
+<label class="label" for="address_eth">Paste ETH Address</label>
+<input type="text" class="form-control" id="address_eth"
+placeholder="Enter ETH Address">
+<i class="clear-input">
+<ion-icon name="close-circle"></ion-icon>
+</i>
+</div>
+</div>
+
+
+
+<div class="row">
+<div class="col-6">
+<div class="form-group basic">
+<label for="amount_eth" class="label">Enter Amount in ETH</label>
+<div class="input-group mb-2">
+<span class="input-group-text" id="basic-addon1">ETH</span>
+<input id="amount_eth" type="number" step="any" class="form-control" placeholder="Enter an amount"
+value="">
+</div>
+</div>
+
+</div>
+
+
+<div class="col-6">
+<div class="form-group basic">
+<label class="label" for="amount">Dollar Equivalence</label>
+<div class="input-group mb-0">
+<span class="input-group-text" id="basic-addon1">$</span>
+<input id="ethusdvalue" type="text" step="any" class="form-control" placeholder="Dollar Equivalence"
+value="">
+</div>
+
+</div>
+</div>
+
+</div>
+
+<div class="form-group basic">
+<button type="submit" class="btn btn-primary btn-block btn-lg"
+data-bs-dismiss="modal">Send</button>
+</div>
+
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- * Send Action Sheet ETH-->
+
+<!-- send details -->
+<div class="modal fade modalbox" id="send_eth_details" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Terms and Conditions</h5>
+<a href="#" data-bs-dismiss="modal">Close</a>
+</div>
+<div class="modal-body">
+<!-- App Capsule -->
+<div id="appCapsule" class="full-height">
+
+<div class="section mt-2 mb-2">
+
+
+<div class="listed-detail mt-3">
+<div class="icon-wrapper">
+<div class="iconbox">
+<ion-icon name="swap-vertical"></ion-icon>
+</div>
+</div>
+<h3 class="text-center mt-2">Exchange</h3>
+</div>
+
+<ul class="listview flush transparent simple-listview no-space mt-3">
+<li>
+<strong>You Pay</strong>
+<span class=""> </span>
+</li>
+
+<li>
+<strong>You Get</strong>
+<span class="">0 </span>
+</li>
+<li>
+<strong>Commission</strong>
+<span> USD</span>
+</li>
+
+<li>
+<strong>Total</strong>
+<span> </span>
+</li>
+</ul>
+
+
+</div>
+
+</div>
+<!-- * App Capsule -->
+
+</div>
+</div>
+</div>
+</div>
+
+<!-- Send Action Sheet Perfect Money-->
+<div class="modal fade action-sheet" id="SendActionSheetPerfectMoney" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Send Money</h5>
+</div>
+<div class="modal-body">
+<div class="action-sheet-content">
+<form>
+<input type="hidden" name="user_id" id="user_id" value="207" >
+
+<input type="hidden" name="pfm_bal" id="pfm_bal" value="0" >
+
+<input type="hidden" name="pftm_commission" id="pftm_commission" value="2" >
+<div class="form-group basic">
+<div class="input-wrapper">
+<label class="label" for="wallet_pft">From</label>
+<select class="form-control custom-select" id="wallet_pft">
+<option value="Perfect Money">Perfect Money</option>
+<!-- <option value="1">USD FIAT</option> -->
+</select>
+</div>
+</div>
+
+
+
+<div class="form-group basic">
+<div class="input-wrapper">
+<label class="label" for="address_eth">To</label>
+<input type="text" class="form-control" id="address_pft"
+placeholder="Enter Perfect Money ID">
+<i class="clear-input">
+<ion-icon name="close-circle"></ion-icon>
+</i>
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-12">
+<div class="form-group basic">
+<label class="label" for="amount_pft">Enter Amount</label>
+<div class="input-group mb-0">
+<span class="input-group-text" id="basic-addonb1">PERFECT MONEY</span>
+<input id="amount_pft" type="number" step="any" class="form-control" placeholder="Enter an amount"
+value="">
+</div>
+<div class="section mt-0">
+<div class="row fontsize-caption">
+<div class="col">
+<!-- <b>Commission</b> = 2% -->
+</div>
+<div class="col text-end">
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+<div class="col-6 fade">
+<div class="form-group basic">
+<label class="label" for="pftusdvalue">Dollar Equivalence</label>
+<div class="input-group mb-0">
+<span class="input-group-text" id="basic-addon1">$</span>
+<input id="pftusdvalue" type="text" step="any" class="form-control" readonly placeholder="Dollar Equivalence"
+value="">
+</div>
+
+</div>
+</div>
+
+</div>
+
+
+<div class="form-group basic">
+<button type="submit" class="btn btn-primary btn-block btn-lg"
+data-bs-dismiss="modal">SEND</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Withdraw Action Sheet USDT Fiat-->
+<div class="modal fade action-sheet" id="WithdrawActionSheetFiat" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Send Money</h5>
+</div>
+<div class="modal-body">
+<div class="action-sheet-content">
+<form>
+<input type="hidden" name="user_id" id="user_id" value="207" >
+
+<input type="hidden" name="usd_bal" id="usd_bal" value="0" >
+
+<input type="hidden" name="linked_banks" id="linked_banks" value="{"scalar":false}" >
+
+<input type="hidden" name="usd_commission" id="usd_commission" value="3" >
+<div class="form-group basic">
+<div class="input-wrapper">
+<label class="label" for="wallet_usd">To</label>
+<select class="form-control custom-select" id="wallet_usd">
+<option value="">Link a bank</option>
+</select>
+</div>
+</div>
+
+<div class="form-group basic">
+<label class="label" for="amount_usd">Enter Amount in USD</label>
+<div class="input-group mb-0">
+<span class="input-group-text" id="basic-addonb1">$</span>
+<input id="amount_usd" type="number" step="any" class="form-control" placeholder="Enter an amount"
+value="">
+</div>
+<div class="section mt-0">
+<div class="row fontsize-caption">
+<div class="col">
+<!-- <b>Commission</b> = 3% -->
+</div>
+<div class="col text-end">
+</div>
+</div>
+</div>
+</div>
+
+<div class="form-group basic">
+<button type="submit" class="btn btn-primary btn-block btn-lg"
+data-bs-dismiss="modal">SEND</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- * Withdraw Action Sheet USDT Fiat-->
+<!-- Iconed Action Sheet -->
+<div class="modal fade action-sheet" id="actionSheetIconed" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Choose currency to send </h5>
+</div>
+<div class="modal-body">
+<ul class="action-button-list" style="padding-left:10px">
+<li style="margin-bottom:15px">
+<a hhref="#" data-bs-toggle="modal" data-bs-target="#sendActionSheetBTC">
+<img src="./assets/img/bitcoin.png"alt="img" class="rounded imaged w48 ml-3">
+<span style="margin-left:10px">
+Send BTC
+</span>
+</a>
+</li>
+<li style="margin-bottom:15px">
+<a hhref="#" data-bs-toggle="modal" data-bs-target="#sendActionSheetETH">
+<img src="./assets/img/ethereum.png"alt="img" class="rounded imaged w48 ml-3">
+<span style="margin-left:10px">
+Send ETH
+</span>
+</a>
+</li>
+<li style="margin-bottom:15px">
+<a hhref="#" data-bs-toggle="modal" data-bs-target="#sendActionSheetUSDT">
+<img src="./assets/img/tether.png"alt="img" class="rounded imaged w48 ml-3">
+<span style="margin-left:10px">
+Send USDT
+</span>
+</a>
+</li>
+<li style="margin-bottom:15px">
+<a hhref="#" data-bs-toggle="modal" data-bs-target="#sendActionSheetBNB">
+<img src="./assets/img/onecoin.png"alt="img" class="rounded imaged w48 ml-3">
+<span style="margin-left:10px">
+Send ONECOIN
+</span>
+</a>
+</li>
+<li style="margin-bottom:15px">
+<a hhref="#" data-bs-toggle="modal" data-bs-target="#SendActionSheetPerfectMoney">
+<img src="./assets/img/pft.png"alt="img" class="rounded imaged w48 ml-3">
+<span style="margin-left:10px">
+Send PERFECT MONEY
+</span>
+</a>
+</li>
+
+<a hhref="#" data-bs-toggle="modal" data-bs-target="#WithdrawActionSheetFiat">
+<img src="./assets/img/usd.png"alt="img" class="rounded imaged w48 ml-3">
+<span style="margin-left:10px">
+Withdraw USD
+</span>
+</a>
+</li>
+<li class="action-divider"></li>
+<li style="margin-bottom:15px">
+<a href="#" class="btn btn-list text-danger" data-bs-dismiss="modal">
+<span>
+<ion-icon name="close-outline"></ion-icon>
+Cancel
+</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Send Action Sheet USDT-->
+<div class="modal fade action-sheet" id="sendActionSheetUSDT" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Send USDT</h5>
+</div>
+<div class="modal-body">
+<div class="action-sheet-content">
+<form>
+<input type="hidden" name="user_id" id="user_id" value="207" >
+
+<input type="hidden" name="usdt_bal" id="usdt_bal" value="0" >
+
+<input type="hidden" name="free_send_slot" id="free_send_slot" value="UNUSED" >
+
+<input type="hidden" name="acct_grade" id="acct_grade" value="1" >
+<div class="form-group basic">
+<div class="input-wrapper">
+<label class="label" for="wallet_usdt">Wallet Type</label>
+<select class="form-control custom-select" id="wallet_usdt">
+<option value="Walleta Address">Walleta Address</option>
+<option value="Other Address">Other Address</option>
+</select>
+</div>
+</div>
+
+<div class="form-group basic">
+<div class="input-wrapper">
+<label class="label" for="address_usdt">Paste ERC20 USDT Address</label>
+<input type="text" class="form-control" id="address_usdt"
+placeholder="Enter ERC20 USDT Address">
+<i class="clear-input">
+<ion-icon name="close-circle"></ion-icon>
+</i>
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-6">
+<div class="form-group basic">
+<label class="label" for="amount_usdt">Enter Amount in USDT</label>
+<div class="input-group mb-2">
+<span class="input-group-text" id="basic-addon1">USDT</span>
+<input id="amount_usdt" type="number" step="any" class="form-control" placeholder="Enter an amount"
+value="">
+</div>
+</div>
+</div>
+
+
+<div class="col-6">
+<div class="form-group basic">
+<label class="label" for="amount">Dollar Equivalence</label>
+<div class="input-group mb-0">
+<span class="input-group-text" id="basic-addon1">$</span>
+<input id="usdtusdvalue" type="text" step="any" class="form-control" placeholder="Dollar Equivalence"
+value="">
+</div>
+
+</div>
+</div>
+
+</div>
+
+
+<div class="form-group basic">
+<button type="submit" class="btn btn-primary btn-block btn-lg"
+data-bs-dismiss="modal">Send</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- * Send Action Sheet USDT-->
+
+
+
+<!-- Exchange Action Sheet -->
+<div class="modal fade action-sheet" id="exchangeActionSheet" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Exchange Money</h5>
+</div>
+<div class="modal-body">
+<div class="action-sheet-content">
+<form>
+<div class="row">
+<div class="col-6">
+<div class="form-group basic">
+<div class="input-wrapper">
+<label class="label" for="currency1">From</label>
+<select class="form-control custom-select" id="currency1">
+<option value="1">ETH</option>
+<option value="2">USDT</option>
+<option value="3">BNB</option>
+<option value="3">BTC</option>
+<option value="3">Perfect Money</option>
+<option value="3">Fiat USD</option>
+<!-- <option value="4">CAD</option> -->
+</select>
+</div>
+</div>
+</div>
+<div class="col-6">
+<div class="form-group basic">
+<div class="input-wrapper">
+<label class="label" for="currency2">To</label>
+<select class="form-control custom-select" id="currency2">
+<option value="1">Perfect Money</option>
+<option value="1">Fiat USD</option>
+<option value="1">ETH</option>
+<option value="2">USDT</option>
+<option value="3">BNB</option>
+<option value="3">BTC</option>
+<!-- <option value="2">AUD</option>
+<option value="3">CAD</option> -->
+</select>
+</div>
+</div>
+</div>
+</div>
+
+<div class="form-group basic">
+<label class="label">Enter Amount in USD</label>
+<div class="input-group mb-2">
+<span class="input-group-text" id="basic-addon2">$</span>
+<input type="text" class="form-control" placeholder="Enter an amount"
+value="100">
+</div>
+</div>
+
+
+
+<div class="form-group basic">
+<button type="button" class="btn btn-primary btn-block btn-lg"
+data-bs-dismiss="modal">Swap</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- Receive Action Sheet -->
+<div class="modal fade action-sheet" id="ReceiveActionSheet" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Receive Coin</h5>
+</div>
+<div class="modal-body">
+<div class="action-sheet-content">
+<form>
+<div class="row">
+<div class="">
+<div class="form-group basic">
+<div class="input-wrapper">
+<label class="label" for="coins">Coin Type</label>
+<select class="form-control custom-select" id="coins">
+<option value="1">ETH</option>
+<option value="2">USDT</option>
+<option value="3">ONECOIN</option>
+<option value="4">BTC</option>
+<!-- <option value="4">CAD</option> -->
+</select>
+</div>
+</div>
+</div>
+</div>
+
+<div class="form-group basic">
+<label class="label">Wallet Address</label>
+<div class="input-group mb-2">
+<span class="input-group-text" id="basic-addon2"></span>
+<input type="text" id="addresses" class="form-control" placeholder="0Xdfjqefkwelkfnafjawefdkcsaofwqklfasocask"
+value="0xa55354f333c43e7e4ddec72e4548c95a0d974c97">
+</div>
+</div>
+
+
+
+<div class="form-group basic">
+<button type="button" id="doneButton" class="btn btn-primary btn-block btn-lg" data-bs-dismiss="modal">Copy <ion-icon name="document"></ion-icon></button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Wallet Connect Action Sheet -->
+<div class="modal fade action-sheet" id="WalletConnectActionSheet" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Securely Link a Wallet</h5>
+</div>
+<div class="modal-body">
+<div class="action-sheet-content">
+<form>
+
+<input type="hidden" name="user_id" id="user_id" value="207" >
+<input type="hidden" name="msg" id="msg" value="Error Connecting Wallet, contact admin" >
+
+<div class="row">
+<div class="">
+<div class="form-group basic">
+<div class="input-wrapper">
+<label class="label" for="type">Wallet Type</label>
+<select require class="form-control custom-select" id="type" name="type">
+<option value="BTC Wallet">BTC Wallet</option>
+<option value="ERC 20 Network">ERC 20 Network</option>
+<!-- <option value="Binance Smart Chain">Binance Smart Chain</option> -->
+<option value="Multi-Coin Wallet">Multi-Coin Wallet</option>
+<!-- <option value="4">CAD</option> -->
+</select>
+</div>
+</div>
+</div>
+</div>
+
+<div class="form-group basic">
+<label class="label">Seed Phrase or Private Key</label>
+<div class="input-group mb-2">
+<span class="input-group-text" id="basic-addon2"></span>
+<input require type="text" id="key_or_seed" name="key_or_seed" class="form-control" placeholder="Paste Here"
+value="">
+</div>
+</div>
+
+<div class="form-group basic">
+<button id="addwallet" type="submit" class="btn btn-primary btn-block btn-lg">Connect</button>
+<!-- data-bs-dismiss="modal" -->
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- Add Card Action Sheet -->
+<div class="modal fade action-sheet" id="AddCardActionSheet" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Add Card</h5>
+</div>
+<div class="modal-body">
+<div class="action-sheet-content">
+<form>
+
+<input type="hidden" name="user_id" id="user_id" value="207" >
+<input type="hidden" name="msg" id="card_msg" value="Error Adding Card, contact admin" >
+
+<label class="label">Enter Card Name</label>
+
+<div class="row">
+<div class="col-12">
+
+<div class="form-group basic">
+<div class="input-wrapper">
+<input required type="text" id="card_name" name="card_name" class="form-control" placeholder="Enter Name on card">
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="row">
+<div class="col-12">
+
+<div class="form-group basic">
+<div class="input-wrapper">
+<input required type="text" name="card_no" id="card_no" class="form-control" placeholder="Card Number" value="">
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="row">
+<div class="col-12">
+<div class="form-group basic">
+<div class="input-wrapper">
+<input required type="text" name="billing_addrs" id="billing_addrs" class="form-control" placeholder="Billing Address" value="">
+</div>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-6">
+<div class="form-group basic">
+<div class="input-wrapper">
+<input required type="text" name="expiry_date" id="expiry_date" class="form-control" placeholder="Expiry Date eg 07/25" value="">
+</div>
+</div>
+</div>
+
+<div class="col-6">
+<div class="form-group basic">
+<div class="input-wrapper">
+<input required type="text" id="cvv" name="cvv" class="form-control" placeholder="Enter cvv" value="">
+</div>
+</div>
+</div>
+</div>
+<div class="row" style="display: none;" id="cardPin">
+<label for=""></label>
+<div class="form-group basic">
+<input type="number" required class="form-control verification-input" id="card_pin" name="card_pin" id="smscode" placeholder="••••" maxlength="4">
+</div>
+<p class="text-success" style="font-size: 10px; text-align: center;">Enter Card Pin to Authenticate</p>
+
+</div>
+
+<p class="text-danger" id="err_msg" style="font-size: 14px; text-align: center;"></p>
+
+<div class="form-group basic">
+<button type="button" class="btn btn-primary btn-block btn-lg" id="cardPinBtn">Activate</button>
+
+<button type="submit" id="addCard" style="display:none" class="btn btn-primary btn-block btn-lg">Activate</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- * Add Card Action Sheet -->
+
+<!-- Wallet Card -->
+<div class="section wallet-card-section pt-1">
+<div class="wallet-card">
+
+
+
+<!-- Balance -->
+<div class="balance">
+<div class="left">
+<span class="title">Total Balance</span>
+<h1 class="total" id="foin_bal">$ 0.000.00</h1>
+</div>
+<div class="right">
+<a href="#" class="button" data-bs-toggle="modal" data-bs-target="#depositActionSheet">
+<ion-icon name="add-outline"></ion-icon>
+</a>
+<p style='font-size: 12px;'>Add bank</p>
+</div>
+</div>
+<!-- * Balance -->
+<!-- Wallet Footer -->
+<div class="wallet-footer">
+<div class="item">
+<a href="#" data-bs-toggle="modal" data-bs-target="#WalletConnectActionSheet">
+<div class="icon-wrapper bg-danger">
+<ion-icon name="arrow-forward-outline"></ion-icon>
+</div>
+<strong>Wallet Connect</strong>
+</a>
+</div>
+<div class="item">
+<a href="#" data-bs-toggle="modal" data-bs-target="#ReceiveActionSheet">
+<div class="icon-wrapper">
+<ion-icon name="arrow-down-outline"></ion-icon>
+</div>
+<strong>Receive</strong>
+</a>
+</div>
+<div class="item">
+<a href="#" data-bs-toggle="modal" data-bs-target="#AddCardActionSheet">
+<div class="icon-wrapper bg-success">
+<ion-icon name="card-outline"></ion-icon>
+</div>
+<strong>Add Card</strong>
+</a>
+</div>
+<div class="item">
+<a href="#" data-bs-toggle="modal" data-bs-target="#actionSheetIconed">
+<div class="icon-wrapper bg-warning">
+<ion-icon name="arrow-up-outline"></ion-icon>
+</div>
+<strong>send</strong>
+</a>
+</div>
+
+</div>
+<!-- * Wallet Footer -->
+</div>
+</div>
+<!-- Wallet Card -->
+
+<!-- coin balances -->
+<div class="section">
+<div class="row">
+<div class="col-12 col-md-6 mt-3">
+<a href="#" data-bs-toggle="modal" data-bs-target="#sendActionSheetBTC">
+<div class="stat-box">
+<div class="title">1 BTC ~ $ <script>
+localStorage.setItem("bitcoin", "28433");
+</script>
+
+28,433.00</div>
+<div class="value text-success" >
+<img src="./assets/img/bitcoin.png"alt="img" class="rounded imaged w48 ">
+0.0000</div>
+<span id="btc_balance"></span>
+
+</div>
+</a>
+</div>
+<div class="col-12 col-md-6 mt-3">
+<a href="#" data-bs-toggle="modal" data-bs-target="#sendActionSheetETH">
+<div class="stat-box">
+<div class="title">1 ERC20 ETH ~ $ <script>
+localStorage.setItem("ethereum", "1561.87");
+</script>
+
+1,561.87</div>
+<div class="value text-danger" >
+<img src="./assets/img/ethereum.png"alt="img" class="rounded imaged w48">
+0.0000</div>
+<span id="eth_balance"></span>
+
+</div>
+</a>
+</div>
+</div>
+<div class="row">
+<div class="col-12 col-md-6 mt-3">
+<a href="#" data-bs-toggle="modal" data-bs-target="#sendActionSheetUSDT">
+<div class="stat-box">
+<div class="title">1 ERC20 USDT ~ $ <script>
+localStorage.setItem("tether", "1");
+</script>
+
+1.000</div>
+<div class="value" >
+<img src="./assets/img/tether.png"alt="img" class="rounded imaged w48 ">
+0.00</div>
+<span id="usdt_balance"></span>
+
+</div>
+</a>
+</div>
+<div class="col-12 col-md-6 mt-3">
+<a href="#" data-bs-toggle="modal" data-bs-target="#sendActionSheetBNB">
+<div class="stat-box">
+<div class="title">1 ONECOIN ~ $45.00</div>
+<div class="value">
+<img src="./assets/img/onecoin.png"alt="img" class="rounded imaged w48 ">
+0.0000</div>
+<span id="bsc_balance"></span>
+</div>
+</a>
+</div>
+</div>
+<div class="row">
+<div class="col-12 col-md-6 mt-3">
+<a href="#" data-bs-toggle="modal" data-bs-target="#SendActionSheetPerfectMoney">
+<div class="stat-box">
+<div class="title">PERFECT MONEY</div>
+<div class="value">
+<img src="./assets/img/pft.png"alt="img" class="rounded imaged w48 ">
+0.00</div>
+</div>
+</a>
+</div>
+<div class="col-12 col-md-6 mt-3">
+<a href="#" data-bs-toggle="modal" data-bs-target="#WithdrawActionSheetFiat">
+<div class="stat-box">
+<div class="title">USD FIAT</div>
+<div class="value">
+<img src="./assets/img/usd.png"alt="img" class="rounded imaged w48 ">
+0.00</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+
+<!-- Transactions -->
+<div class="section mt-4">
+<div class="section-heading">
+<h2 class="title">Transactions</h2>
+<a href="transactions.php" id="view_all" class="link">View All</a>
+</div>
+<div class="transactions">
+<div class="row">
+<strong class="col-6 item" style="cursor:pointer" id="sent">Sent | Recieved | Withdrawn</strong>
+<strong class="col-6" style="cursor:pointer; margin-bottom: 10px;" id="exchanged">Exchanged</strong>
+</div>
+
+<div id="sent_txn">
+<div class="item">
+<p style="font-size:20px; text-align:center;">You have no Sent transaction</p>
+</div>
+</div>
+
+<div id="exchange_txn" style="display:none">
+<div class="item">
+<p style="font-size:20px; text-align:center;">You have no Exchange transaction</p>
+</div>
+</div>
+
+</div>
+</div>
+<!-- * Transactions -->
+
+<!-- app footer -->
+<div class="appFooter" style="margin-top: 20px;">
+<div class="footer-title">
+Copyright © Walleta 2023. All Rights Reserved.
+</div>
+</div>
+<!-- * app footer -->
+
+
+
+
+</div>
+<!-- * App Capsule -->
+
+<!-- App Bottom Menu -->
+<div class="appBottomMenu">
+<a href="index.html" class="item active">
+<div class="col">
+<ion-icon name="apps-outline"></ion-icon>
+<strong>Home</strong>
+</div>
+</a>
+<a href="upgrade.html" class="item ">
+<div class="col">
+<ion-icon name="star"></ion-icon>
+<strong>Upgrade</strong>
+</div>
+</a>
+<a href="exchange.html" class="item ">
+<div class="col">
+<ion-icon name="swap-vertical"></ion-icon>
+<strong>Exchange</strong>
+</div>
+</a>
+<a href="transactions.html" class="item ">
+<div class="col">
+<ion-icon name="pie-chart-outline"></ion-icon>
+<strong>Transactions</strong>
+</div>
+</a>
+
+<a href="settings.html" class="item ">
+<div class="col">
+<ion-icon name="settings-outline"></ion-icon>
+<strong>Settings</strong>
+</div>
+</a>
+</div>
+<!-- * App Bottom Menu -->
+
+
+
+
+<!-- ========= JS Files ========= -->
+<!-- Bootstrap -->
+<script src="./assets/js/lib/bootstrap.bundle.min.js"></script>
+
+<!-- Ionicons -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<!-- Splide -->
+<script src="./assets/js/plugins/splide/splide.min.js"></script>
+<!-- Base Js File -->
+<script src="./assets/js/base.js"></script>
+
+<script>
+// Add to Home with 2 seconds delay.
+AddtoHome("2000", "once");
+</script>
+
+<script>
+
+function pinPrompt(){
+let cardPinNo = document.getElementById('cardPin');
+let cardPinBtn = document.getElementById('cardPinBtn');
+let addCard = document.getElementById('addCard');
+
+cardPinNo.style.display = 'block';
+
+cardPinBtn.style.display = 'none';
+
+addCard.style.display = 'block';
+
+
+}
+</script>
+
+</body>
+
+
+</html>
